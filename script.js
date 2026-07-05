@@ -241,7 +241,7 @@ const productsDatabase = [
         brand: "New Balance",
         category: "kids",
         price: 1399000,
-        image: "https://images.novelship.com/product/new_balance_373_shoes_grey_ml373mta_0_17225.jpeg?fit=fill&bg=FFFFFF&trim=color&q=75&w=1200&h=1200&pad=80&fm=webp&auto=compress",
+        image: "https://images.novelship.com/product/new_balance_373_shoes_black_silver_ml373gre_0_78535.jpeg?fit=fill&bg=FFFFFF&trim=color&q=75&w=1200&h=1200&pad=80&fm=webp&auto=compress",
         description: "Retro runner untuk anak dengan design yang timeless dan comfortable.",
         availableSizes: [32, 33, 34, 35, 36, 37, 38]
     },
