@@ -1,2 +1,2 @@
-*.koneksi.php
-*.test_db.php
+koneksi.php
+test_db.php
