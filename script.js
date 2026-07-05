@@ -221,7 +221,7 @@ const productsDatabase = [
         brand: "New Balance",
         category: "womens",
         price: 1999000,
-        image: "https://data.sneakers76.com/images/galleries/6087/bb550lsb_202.png",
+        image: "https://www.resellzonecesena.com/cdn/shop/files/new-balance-550-white-green-bb550wt1-resellzone.jpg?v=1714720711",
         description: "Basketball heritage dengan design clean dan colorway yang versatile.",
         availableSizes: [36, 37, 38, 39, 40]
     },
