@@ -1,6 +1,6 @@
 # SneakVerse 👟
 
-SneakVerse adalah sebuah platform web e-commerce modern yang dirancang khusus untuk para pencinta dan kolektor sneakers. Project ini fokus pada penyediaan antarmuka yang bersih, intuitif, dan responsif untuk menjelajahi serta mengelola katalog produk sepatu terbaru.
+SneakVerse adalah sebuah platform web e-commerce modern yang dirancang khusus untuk para pencinta dan kolektor sneakers. Project ini fokus pada penyediaan antarmuka yang bersih, intuitif, dan responsif untuk menjelajahi serta mengelola katalog produk sepatu lokal maupun internasional.
 
 ## 🚀 Fitur Utama
 
