@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakVerse - Where Style Meets the Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>SneakVerse</h1>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active" data-page="home">Home</a>
+                    <a href="#" class="nav-link" data-category="mens">Mens</a>
+                    <a href="#" class="nav-link" data-category="womens">Womens</a>
+                    <a href="#" class="nav-link" data-category="kids">Kids</a>
+                </nav>
+
+                <div class="header-icons">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Cari sepatu..." id="searchInput">
+                    </div>
+                    <i class="fas fa-shopping-cart cart-icon" id="cartIcon"></i>
+                    <i class="fas fa-user user-icon" id="userIcon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Home Page -->
+        <section id="homePage" class="page active">
+            <!-- Hero Slider -->
+            <div class="hero-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="https://cdnb.artstation.com/p/assets/images/images/048/142/459/large/andrea-ayala-banner-new-balance-nuevo.jpg?1649299298"
+                            alt="Urban Sneakers">
+                        <div class="slide-content">
+                            <h2>Step Into Style</h2>
+                            <p>Koleksi Sneakers Terbaru</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.shopify.com/s/files/1/1133/9738/collections/BANNER_VANS-01.jpg?v=1723434318"
+                            alt="Street Style">
+                        <div class="slide-content">
+                            <h2>Premium Quality</h2>
+                            <p>Sepatu Berkualitas untuk Gaya Hidup Aktif</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ytimg.com/vi/TonNdlqz2uI/maxresdefault.jpg"
+                            alt="Lifestyle">
+                        <div class="slide-content">
+                            <h2>Walk With Confidence</h2>
+                            <p>Dapatkan Sneakers Impianmu Sekarang</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+
+            <!-- Brand Banner -->
+            <section class="brand-section">
+                <div class="container">
+                    <h2 class="section-title">Shop By Brand</h2>
+                    <div class="brand-grid">
+                        <div class="brand-card" data-brand="Nike">
+                            <img src="https://nmp.about.nike.com/originals/about/prod/cf68f541-fc92-4373-91cb-086ae0fe2f88/001-nike-logos-swoosh-black.jpg?s=ad964c64369408b66e2712e6c9dd1208f08346cc9a9f268a60698091376d53f3"
+                                alt="Nike">
+                        </div>
+                        <div class="brand-card" data-brand="Adidas">
+                            <img src="https://artmosphere-design.com/wp-content/uploads/2023/09/adidas04.jpg"
+                                alt="Adidas">
+                        </div>
+                        <div class="brand-card" data-brand="New Balance">
+                            <img src="http://pluspng.com/img-png/new-balance-logo-png-new-balance-logo-jpg-1598.jpg"
+                                alt="New Balance">
+                        </div>
+                        <div class="brand-card" data-brand="Vans">
+                            <img src="https://i.pinimg.com/originals/79/45/74/794574c3e4f13d03d4c62d7e8ed74eab.png"
+                                alt="Vans">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div class="container">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Product Detail Page -->
+        <section id="productDetailPage" class="page">
+            <div class="container">
+                <button class="back-btn" id="backBtn"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <div class="product-detail-container">
+                    <div class="product-detail-image">
+                        <img id="detailImage" src="" alt="">
+                    </div>
+                    <div class="product-detail-info">
+                        <p class="product-brand" id="detailBrand"></p>
+                        <h1 class="product-name" id="detailName"></h1>
+                        <p class="product-price" id="detailPrice"></p>
+                        <p class="product-description" id="detailDescription"></p>
+
+                        <div class="size-selector">
+                            <h3>Pilih Ukuran:</h3>
+                            <div class="size-buttons" id="sizeButtons">
+                                <!-- Sizes will be loaded dynamically -->
+                            </div>
+                            <p class="size-error" id="sizeError">Pilih ukuran terlebih dahulu!</p>
+                        </div>
+
+                        <button class="buy-btn" id="buyNowBtn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkoutPage" class="page">
+            <div class="container">
+                <button class="back-btn" id="checkoutBackBtn"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <h2 class="section-title">Checkout</h2>
+                <div class="checkout-container">
+                    <div class="checkout-form">
+                        <h3>Informasi Pengiriman</h3>
+                        <form id="paymentForm">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" name="customer_name" id="checkoutName" placeholder="Contoh: Budi Santoso" required>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Alamat Pengiriman</label>
+                                <textarea name="customer_address" id="checkoutAddress" rows="3"
+                                    placeholder="Jalan, Nomor Rumah, Kecamatan, Kota..." required></textarea>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Nomor WhatsApp / Telepon</label>
+                                <input type="number" name="customer_phone" id="checkoutPhone" placeholder="0812xxxxxxx" required>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Metode Pembayaran</label>
+                                <div class="payment-options">
+                                    <label class="radio-box">
+                                        <input type="radio" name="payment_method" value="Transfer Bank" checked>
+                                        <span>Transfer Bank</span>
+                                    </label>
+                                    <label class="radio-box">
+                                        <input type="radio" name="payment_method" value="E-Wallet">
+                                        <span>E-Wallet</span>
+                                    </label>
+                                    <label class="radio-box">
+                                        <input type="radio" name="payment_method" value="COD">
+                                        <span>COD (Bayar di Tempat)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <input type="hidden" name="product_name" id="hiddenProductName">
+                            <input type="hidden" name="product_price" id="hiddenProductPrice">
+                        
+                            <button type="submit" class="btn-checkout">Bayar Sekarang</button>
+                        </form>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Ringkasan Pesanan</h3>
+                        <div class="summary-product">
+                            <img id="summaryImage" src="" alt="">
+                            <div class="summary-info">
+                                <p class="summary-name" id="summaryName"></p>
+                                <p class="summary-size">Ukuran: <span id="summarySize"></span></p>
+                                <p class="summary-price" id="summaryPrice"></p>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <p>Total Pembayaran</p>
+                            <h2 id="totalPrice"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invoice Page -->
+        <section id="invoicePage" class="page">
+            <div class="container">
+                <div class="invoice-container">
+                    <div class="invoice-header">
+                        <h1>SneakVerse</h1>
+                        <p>Invoice Pembelian</p>
+                    </div>
+
+                    <div class="invoice-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Pesanan Berhasil!</h2>
+                        <p>Terima kasih telah berbelanja di SneakVerse</p>
+                    </div>
+
+                    <div class="invoice-details">
+                        <div class="invoice-info">
+                            <h3>Informasi Pembeli</h3>
+                            <p><strong>Nama:</strong> <span id="invoiceName"></span></p>
+                            <p><strong>Alamat:</strong> <span id="invoiceAddress"></span></p>
+                            <p><strong>Telepon:</strong> <span id="invoicePhone"></span></p>
+                        </div>
+
+                        <div class="invoice-product">
+                            <h3>Detail Produk</h3>
+                            <div class="invoice-item">
+                                <img id="invoiceImage" src="" alt="">
+                                <div class="invoice-item-info">
+                                    <p class="invoice-product-name" id="invoiceProductName"></p>
+                                    <p>Ukuran: <span id="invoiceSize"></span></p>
+                                    <p class="invoice-price" id="invoicePrice"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="invoice-payment">
+                            <p><strong>Metode Pembayaran:</strong> <span id="invoicePayment"></span></p>
+                            <div class="invoice-total">
+                                <h3>Total Pembayaran</h3>
+                                <h2 id="invoiceTotal"></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="continue-btn" id="continueShoppingBtn">Lanjut Belanja</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profilePage" class="page">
+            <div class="container">
+                <button class="back-btn" id="profileBackBtn"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <h2 class="section-title">Profil Saya</h2>
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 id="profileUsername"></h3>
+
+                        <form id="profileForm">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" id="profileFullName" placeholder="Masukkan nama lengkap">
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Alamat Pengiriman Default</label>
+                                <textarea id="profileAddress" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Nomor WhatsApp / Telepon</label>
+                                <input type="number" id="profilePhone" placeholder="Contoh: 08123456789">
+                            </div>
+                            <button type="submit" class="submit-btn">Simpan Perubahan</button>
+                        </form>
+
+                        <button class="logout-btn" id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+        
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+        
+            <div class="tab-content active" id="loginTab">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <form id="loginForm">
+                    <div class="form-group compact">
+                        <label>Username</label>
+                        <input type="text" id="loginUsername" placeholder="Masukkan username" required>
+                    </div>
+                    <div class="form-group compact">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        
+            <div class="tab-content" id="registerTab">
+                <h2 class="modal-title">Buat Akun</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="text" id="registerUsername" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <input type="text" id="registerFullName" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="registerPhone" placeholder="No. Telepon / WA" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="registerAddress" rows="2" placeholder="Alamat Lengkap" required></textarea>
+                    </div>
+            
+                    <button type="submit" class="submit-btn">Daftar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SneakVerse</h3>
+                    <p>Premium sneakers store dengan koleksi terlengkap dan harga terbaik.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Didirikan tahun 2025, kami adalah toko sepatu online terpercaya yang menyediakan sneakers
+                        berkualitas tinggi untuk semua kalangan.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><i class="fab fa-whatsapp"></i> +6281234567890</p>
+                    <p><i class="fas fa-envelope"></i> info@sneakhype.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 SneakVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
