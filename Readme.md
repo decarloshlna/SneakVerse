@@ -14,19 +14,3 @@ SneakVerse adalah sebuah platform web e-commerce modern yang dirancang khusus un
 *   **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
 *   **Backend:** PHP (Native)
 *   **Database:** MySQL / MariaDB
-
-## 📂 Struktur Folder Proyek
-
-```text
-├── .vscode/               # Konfigurasi workspace VS Code (di-gitignore)
-├── css/                   # Menyimpan file styling utama (style.css, dll)
-├── js/                    # Menyimpan file logika frontend (script.js, dll)
-├── images/                # Aset gambar produk dan UI website
-├── .gitignore             # Daftar file yang diabaikan oleh Git
-├── index.html             # Halaman utama / Landing page
-├── koneksi.php            # Konfigurasi koneksi ke database (di-gitignore)
-├── login.php              # Halaman autentikasi masuk pengguna
-├── register.php           # Halaman pendaftaran akun baru
-├── checkout.php           # Proses simulasi checkout produk
-├── test_db.php            # File pengujian database lokal (di-gitignore)
-└── README.md              # Dokumentasi proyek
